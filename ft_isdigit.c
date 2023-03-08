@@ -6,7 +6,7 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:08:06 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/07 17:22:56 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:54:10 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,11 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+
+// #include <unistd.h>
+
+// int	main(void)
+// {
+// 	printf("%d ", ft_isdigit('a'));
+// 	return (0);
+// }
