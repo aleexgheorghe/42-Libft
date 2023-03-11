@@ -6,7 +6,7 @@
 #    By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/09 15:08:42 by acalin-b          #+#    #+#              #
-#    Updated: 2023/03/09 15:36:05 by acalin-b         ###   ########.fr        #
+#    Updated: 2023/03/10 13:56:54 by acalin-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,12 @@ FILES		= ft_atoi.c \
 				ft_isdigit.c \
 				ft_isascii.c \
 				ft_isprint.c \
-				ft_isalnum.c
+				ft_strlen.c \
+				ft_strlcpy.c \
+				ft_isalnum.c \
+				ft_toupper.c \
+				ft_tolower.c \
+				ft_bzero.c
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
