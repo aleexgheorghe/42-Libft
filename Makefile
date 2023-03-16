@@ -6,7 +6,7 @@
 #    By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 15:26:57 by acalin-b          #+#    #+#              #
-#    Updated: 2023/03/16 11:32:09 by acalin-b         ###   ########.fr        #
+#    Updated: 2023/03/16 12:15:36 by acalin-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ FILES		= ft_atoi.c \
 				ft_memcpy.c \
 				ft_memmove.c \
 				ft_strlcat.c \
-				ft_memcmp.c
+				ft_memcmp.c \
+				ft_strncmp.c
 
 # Todos los archivos .c los migramos 
 OBJS	= $(FILES:%.c=%.o)

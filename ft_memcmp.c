@@ -6,28 +6,29 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 10:59:38 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/16 12:06:26 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/16 12:45:09 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Sigue mal, no funciona con cadenas de caracteres
 int ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	// Falla en 2 test, revisar en detalle
 	size_t i;
 	const unsigned char *s1;
 	const unsigned char *s2;
+	size_t length;
 	
 	i = 0;
 	s1 = str1;
 	s2 = str2;
 	
-	while (n--)
+	while (n-- && (s1[i] || s2[i]))
 	{
 		if (s1[i] != s2[i])
 		{
-			if (s1[i] > s2[i] || (n == 0))
+			if (s1[i] > s2[i])
 				return (1);
 			else
 				return (-1);
