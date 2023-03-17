@@ -6,7 +6,7 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:02:12 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/13 17:21:37 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/17 16:53:09 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,28 +36,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (p_dest);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// 
-// int main()
-// {
-// 	char str1[] = "Geeks"; // Array of size 100
-// 	char str2[] = "123456"; // Array of size 5
-// 
-// 	printf("%s", memmove(str1, str2, 4));
-// 	
-// //    char str1[] = "Geeks"; // Array of size 100
-// //    char str2[] = "Quiz"; // Array of size 5
-// //  
-// //    puts("str1 before memmove ");
-// //    puts(str1);
-// //  
-// //    /* Copies contents of str2 to sr1 */
-// //    memmove(str1, str2, sizeof(str2));
-// //  
-// //    puts("\nstr1 after memmove ");
-// //    puts(str1);
-// //  
-// 	return 0;
-// }

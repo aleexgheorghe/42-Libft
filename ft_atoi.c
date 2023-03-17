@@ -6,7 +6,7 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:57:15 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/09 17:17:48 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/17 16:53:25 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * s);
 }
-// #include <unistd.h>
-// #include <stdio.h>
-// #include <stdlib.h>
-
-// int	main(void)
-// {
-// 	// Test of aoi
-// 	printf("%d ", ft_atoi("--123abc"));
-// 	printf("%d ", atoi("--123abc"));
-// 	return (0);
-// }

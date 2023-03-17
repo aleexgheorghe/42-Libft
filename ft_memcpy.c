@@ -6,7 +6,7 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:25:34 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/13 14:08:30 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/17 16:53:11 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (p_dest);
 }
-
-//#include <stdio.h>
-//#include <string.h>
-//int main(void) {
-//   const char src[50] = "hola";
-//   char dest[50];
-//   strcpy(dest,"Heloooo!!");
-//   //printf("Before memcpy dest = %s\n", dest);
-//   //memcpy(dest, src, strlen(src)+1);
-//   //printf("After memcpy dest = %s\n", dest);
-//   //printf("..............................");
-//   printf("%s", ft_memcpy(dest, src, strlen(src)+1));
-//   
-//   
-//   return(0);
-//}

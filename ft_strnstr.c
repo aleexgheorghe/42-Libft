@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 17:08:06 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/17 16:52:38 by acalin-b         ###   ########.fr       */
+/*   Created: 2023/03/17 13:34:07 by acalin-b          #+#    #+#             */
+/*   Updated: 2023/03/17 16:49:57 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+char	*ft_strnstr(const char	*str, const char *find, size_t len)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (*find == '\0')
+		return ((char *)str);
+	while (str[i] != '\0' && i < len)
+	{
+		while (str[i + j] == find[j] && i + j < len)
+		{
+			if (find[j + 1] == '\0')
+				return ((char *)str + i);
+			j++;
+		}
+		j = 0;
+		i++;
+	}
+	return (NULL);
 }

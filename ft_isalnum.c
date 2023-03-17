@@ -6,7 +6,7 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:14:19 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/09 16:32:16 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/17 16:53:20 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%d", isalnum(0));
-// 	printf("%d", isalnum('a'));
-// 	return (0);
-// }

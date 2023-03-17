@@ -6,7 +6,7 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 17:50:43 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/09 18:12:17 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/17 16:50:11 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,3 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-
-//int	main(void)
-//{
-//	return (0);
-//}
