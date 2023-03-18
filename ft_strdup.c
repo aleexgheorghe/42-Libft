@@ -6,15 +6,14 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:10:39 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/18 15:55:03 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/18 19:04:47 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-//#include <stdio.h>
 
-char	ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -40,11 +39,3 @@ char	*ft_strdup(const char *s)
 	ft_strcpy(str, (char *)s);
 	return (str);
 }
-
-//int	main(void)
-//{
-//	char *str = "Hola";
-//	char *str2 = ft_strdup(str);
-//	printf("%s", str2);
-//	return (0);
-//}
