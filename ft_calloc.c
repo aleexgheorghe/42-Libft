@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/16 12:15:23 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/18 13:19:09 by acalin-b         ###   ########.fr       */
+/*   Created: 2023/03/18 12:04:10 by acalin-b          #+#    #+#             */
+/*   Updated: 2023/03/18 14:31:44 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdlib.h>
+//#include <stdio.h>
 
-int	ft_strncmp(const char *str1, const char *str2, size_t num)
+void	*ft_calloc(size_t n, size_t size)
 {
-	const unsigned char	*s1;
-	const unsigned char	*s2;
+	void	*elements;
 
-	s1 = (const unsigned char *)str1;
-	s2 = (const unsigned char *)str2;
-	while (num-- && (*s1 || *s2))
-	{
-		if (*s1 != *s2 && *s1 > *s2)
-			return (1);
-		else if (*s1 != *s2 && *s1 < *s2)
-			return (-1);
-		else if (*s1 == *s2)
-		{
-			s1++;
-			s2++;
-		}
-	}
-	return (0);
+	elements = malloc(n * size);
+	if (elements == NULL)
+		return (NULL);
+	ft_bzero(elements, n * size);
+	return (elements);
 }
+
+//int	main(void)
+// 	// Test ft_calloc: Probamos con 10 caracteres de tamaño char
+//	char *str = ft_calloc(10, sizeof(char));
+//	printf("%s", str);
+//	return (0);
+//}

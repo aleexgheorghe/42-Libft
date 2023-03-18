@@ -13,6 +13,6 @@
 # 42 / Ignore files compiled by the Makefile and emacs
 *.o
 *.a
-.DS_Store
-.out
-.swp
+*.DS_Store
+*.out
+*.swp

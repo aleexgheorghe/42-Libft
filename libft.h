@@ -6,7 +6,7 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:14:45 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/17 13:39:27 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/18 16:11:26 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,8 @@ int					ft_strncmp(const char *str1, const char *str2, size_t num);
 char				*ft_strchr(const char *str, int c);
 char				*ft_strrchr(const char *str, int c);
 char				*ft_strnstr(const char	*str, const char *find, size_t len);
+void				*ft_calloc(size_t n, size_t size);
+char				*ft_strdup(const char *s);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
