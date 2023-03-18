@@ -26,6 +26,10 @@ In this repository you will find the following functions:
 | memcmp  | Compares two sections of memory |
 | strnstr  | Find the first occurrence of a string in another string up to a number of characters |
 | atoi  | Converts a string to an integer |
+| calloc  | Allocates memory for an array and fills it with zeros |
+| strdup  | Duplicates a string |
+| substr  | Creates a substring from a string |
+| strjoin  | Concatenates two strings |
 
 These functions are commonly used in C programming and can be used for a variety of tasks, from manipulating strings to manipulating data in memory.
 
