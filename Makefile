@@ -6,7 +6,7 @@
 #    By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 15:26:57 by acalin-b          #+#    #+#              #
-#    Updated: 2023/03/19 15:53:23 by acalin-b         ###   ########.fr        #
+#    Updated: 2023/03/21 10:01:16 by acalin-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ FILES		= ft_atoi.c \
 				ft_substr.c \
 				ft_strjoin.c \
 				ft_strtrim.c \
-				ft_itoa.c
+				ft_itoa.c \
+				ft_strmapi.c
 
 OBJS	= $(FILES:%.c=%.o)
 
