@@ -6,7 +6,7 @@
 /*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:14:45 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/18 18:22:04 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/19 16:03:57 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,7 @@ void				*ft_calloc(size_t n, size_t size);
 char				*ft_strdup(const char *s);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtrim(char const *s1, char const *set);
+char				*ft_itoa(int n);
 
 #endif
