@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acalin-b <acalin-b@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: acalin-b <acalin-b@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 10:19:36 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/21 11:20:42 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/22 12:49:42 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{
