@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acalin-b <acalin-b@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:47:22 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/17 16:53:00 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/22 10:46:07 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	ft_strlen(char *c)
 
 	i = 0;
 	while (c[i] != '\0')
-		i ++;
+		i++;
 	return (i);
 }

@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acalin-b <acalin-b@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 10:19:36 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/21 10:23:05 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/21 11:20:42 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 

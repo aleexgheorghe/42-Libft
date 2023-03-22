@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acalin-b <acalin-b@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 14:33:30 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/21 09:54:26 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/22 10:46:37 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,15 @@ int	ft_intlen(int n)
 	return (i);
 }
 
+char	*hardcodrd(int n)
+{
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	return (NULL);
+}
+
 char	*ft_itoa(int n)
 {
 	int		neg;
@@ -34,10 +43,8 @@ char	*ft_itoa(int n)
 	int		len;
 
 	neg = 0;
-	if (n == 0)
-		return (ft_strdup("0"));
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
+	if (n == 0 || n == -2147483648)
+		return (hardcodrd(n));
 	if (n < 0)
 	{
 		neg = 1;

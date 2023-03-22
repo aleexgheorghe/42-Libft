@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acalin-b <acalin-b@student.42.fr>          +#+  +:+       +#+         #
+#    By: acalin-b <acalin-b@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 15:26:57 by acalin-b          #+#    #+#              #
-#    Updated: 2023/03/21 10:21:17 by acalin-b         ###   ########.fr        #
+#    Updated: 2023/03/22 10:47:14 by acalin-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,12 @@ FILES		= ft_atoi.c \
 				ft_strtrim.c \
 				ft_itoa.c \
 				ft_strmapi.c \
-				ft_striteri.c
+				ft_striteri.c \
+				ft_putchar_fd.c \
+				ft_putstr_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c \
+				ft_split.c
 
 OBJS	= $(FILES:%.c=%.o)
 
