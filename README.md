@@ -30,6 +30,14 @@ In this repository you will find the following functions:
 | strdup  | Duplicates a string |
 | substr  | Creates a substring from a string |
 | strjoin  | Concatenates two strings |
+| strtrim  | Removes characters from the beginning and end of a string |
+| split  | Splits a string into an array of strings using a delimiter |
+| itoa  | Converts an integer to a string |
+| strmapi  | Applies a function to each character of a string |
+| putchar_fd  | Writes a character to a file descriptor |
+| putstr_fd  | Writes a string to a file descriptor |
+| putendl_fd  | Writes a string to a file descriptor, followed by a newline |
+| putnbr_fd  | Writes an integer to a file descriptor |
 
 These functions are commonly used in C programming and can be used for a variety of tasks, from manipulating strings to manipulating data in memory.
 
