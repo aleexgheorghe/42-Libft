@@ -6,80 +6,88 @@
 /*   By: acalin-b <acalin-b@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 10:01:21 by acalin-b          #+#    #+#             */
-/*   Updated: 2023/03/22 17:05:05 by acalin-b         ###   ########.fr       */
+/*   Updated: 2023/03/23 14:50:34 by acalin-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <stdlib.h>
 
-// Analizamos la frase "Hola como estás, mi nombre es Alex"
-// La separación se realiza con " " (espaicos)
-// El resultadao debe ser un array de strings:
-// "Hola", "como", "estás,", "mi", "nombre", "es", "Alex"
-
-// 1. Contar el número de palabras
-// 2. Crear un array de strings con el número de palabras
-// 3. Reservar memoria para cada string
-// 4. Copiar cada palabra en su string correspondiente
-// 5. Devolver el array de strings
-// 6. Liberar la memoria
-
-int	ft_count_word(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
-	int w;
-	int i;
+	int	words;
 
-	w = 0;
-	i = 0;
-	while (s[i] != '\0')
+	words = 0;
+	while (*s)
 	{
-		if (s[i] == c)
-			w++;
-		i++;
+		if (*s != c)
+		{
+			words++;
+			while (*s && *s != c)
+				s++;
+		}
+		else
+			s++;
 	}
-	return (w);
+	return (words);
+}
+
+static int	get_word_len(char const *s, char c)
+{
+	int	len;
+
+	len = 0;
+	while (*s && *s != c)
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**str;
+	char	**arr;
 	int		i;
 	int		j;
-	int		k;
+	int		words;
 
-	i = 0;
-	j = 0;
-	k = 0;
-	str = (char **)malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
-	if (str == NULL)
+	words = count_words(s, c);
+	arr = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!arr)
 		return (NULL);
-	while (s[i] != '\0')
+	i = 0;
+	while (i < words)
 	{
-		if (s[i] == c)
-		{
-			str[j] = (char *)malloc(sizeof(char) * (i - k + 1));
-			if (str[j] == NULL)
-				return (NULL);
-			j++;
-			k = i + 1;
-		}
+		while (*s == c)
+			s++;
+		arr[i] = (char *)malloc(sizeof(char) * (get_word_len(s, c) + 1));
+		if (!arr[i])
+			return (NULL);
+		j = 0;
+		while (*s && *s != c)
+			arr[i][j++] = *s++;
+		arr[i][j] = '\0';
 		i++;
 	}
-	str[j] = (char *)malloc(sizeof(char) * (i - k + 1));
-	if (str[j] == NULL)
-		return (NULL);
-	return (str);
+	arr[i] = NULL;
+	return (arr);
 }
 
-int	main(void)
-{
-	char const	*s;
-	char		c;
-
-	s = "lorem ipsum dolor sit amet";
-	c = ' ';
-	printf("R ETURNED: %s", ft_split(s, c));
-	return (0);
-}
+//int	main(void)
+//{
+//	char *s = "Hola como estás, mi nombre es Alex";
+//	char **str = ft_split(s, ' ');
+//
+//	if (str == NULL)
+//	{
+//		printf("Error: no se pudo asignar memoria.\n");
+//		return (1);
+//	}
+//	for (int i = 0; str[i] != NULL; i++)
+//		printf("%s\n", str[i]);
+//	for (int i = 0; str[i] != NULL; i++)
+//		free(str[i]);
+//	free(str);
+//	return (0);
+//}
