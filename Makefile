@@ -6,7 +6,7 @@
 #    By: acalin-b <acalin-b@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 15:26:57 by acalin-b          #+#    #+#              #
-#    Updated: 2023/03/25 13:33:47 by acalin-b         ###   ########.fr        #
+#    Updated: 2023/03/25 17:00:55 by acalin-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,20 @@ FILES		= ft_atoi.c \
 				ft_putnbr_fd.c \
 				ft_split.c
 
+FILES_BO	= ft_lstnew_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstsize_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstadd_back_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstclear_bonus.c
+#ft_lstiter_bonus.c \
+#ft_lstmap_bonus.c
+
 OBJS	= $(FILES:%.c=%.o)
+B_OBJS	= $(FILES_BO:%.c=%.o)
+
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
@@ -55,8 +68,8 @@ $(NAME): $(OBJS)
 $(OBJ): $(FILES)
 	gcc $(CFLAG) $(FILES)
 
-all: $(NAME)
-
+bonus: $(OBJS) $(B_OBJS)
+	ar rc $(NAME) $(OBJS) $(B_OBJS)
 clean:
 	@rm -f *.o
 
